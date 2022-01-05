@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom"
 
 
 const AddOwners = (props) => {
+    const { id } = useParams();
         ////////////////////////////////////////////////////// hooks single owner
         const [firstNameOwner, setfirstNameOwner] = useState("")
         const [lastNameOwner, setlastNameOwner] = useState("")
@@ -28,7 +29,7 @@ const AddOwners = (props) => {
         const [btn , setBtn] = useState("")
         const [btn2 , setBtn2] = useState("")
       
-    const { id } = useParams();
+  
 
   
    
@@ -51,11 +52,12 @@ const AddOwners = (props) => {
         } if (window.location.pathname === '/addOwners') {
             setBtn('block')
             setBtn2('none')
-            {}
+           
+
             
         }
 
-    }, [props.singleOwner])
+    }, [props.singleOwner , id])
 
 
 

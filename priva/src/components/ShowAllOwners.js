@@ -5,7 +5,7 @@ import {FaStreetView} from 'react-icons/fa'
 import {BsFillTelephoneFill} from 'react-icons/bs'
 import {BiCategory} from 'react-icons/bi'
 import {GoClock} from 'react-icons/go'
-import {MdFilePresent, MdSettingsInputAntenna} from 'react-icons/md'
+import {MdFilePresent} from 'react-icons/md'
 import {FcVoicePresentation} from 'react-icons/fc'
 import { connect } from "react-redux";
 
@@ -65,7 +65,7 @@ const ShowAllOwners = (props) => {
              
          
 
-    }, [props.search])
+    }, [props.search , owners2])
 
    
 useEffect(()=>{
@@ -79,7 +79,7 @@ useEffect(()=>{
       setOwners1(owners2)
     }
 
-},[props.dataCategory])
+},[props.dataCategory , owners3 , owners2])
 
 
 

@@ -4,7 +4,7 @@ import React , {useState} from "react"
 import AddOwners from "./AddOwners"
 
 const UpdateOwner =()=>{
-  const { id } = useParams()
+  const {id} = useParams()
   const [singleOwner , setSingleOwner] = useState({})
  
   useEffect(()=>{
@@ -14,7 +14,7 @@ const UpdateOwner =()=>{
   .then(res => res.json())
   .then(data => setSingleOwner(data[0]))
   
-  }, []);
+  }, [id]);
   
   
   return(

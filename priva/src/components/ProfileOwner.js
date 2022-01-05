@@ -23,7 +23,7 @@ const ProfileOwner = () => {
       .then(res => res.json())
       .then(data => setOneOwner(data))
       .catch(err => console.log(err))
-  },[])
+  },[id])
 
   const DeleteOwner = () => {
     fetch(`http://localhost:8080/deleteOwner/${id}`, {
