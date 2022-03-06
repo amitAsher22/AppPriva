@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { getOwners} from '../reducers/action'
 import ShowAllOwners from "./ShowAllOwners";
 import { useState } from "react";
-import {GoogleLogin , GoogleLogout } from 'react-google-login'
+// import {GoogleLogin , GoogleLogout } from 'react-google-login'
 
 
 
@@ -15,24 +15,24 @@ const Home =()=>{
     const [showLoginButton , setShowLoginButton] = useState(true) 
     const [showLogoutButton , setShowLogoutButton] = useState(false) 
     const [fullNameUser , setFullName] = useState('')
-    const  responseGoogle = (response )=>{
-        setFullName(response.profileObj.name)
-       setShowLoginButton(false)
-        setShowLogoutButton(true)
+    // const  responseGoogle = (response )=>{
+    //     setFullName(response.profileObj.name)
+    //    setShowLoginButton(false)
+    //     setShowLogoutButton(true)
   
-    }
+    // }
     
-    const onSignoutSuccess = ()=>{
-        alert('you have been signed out successFully' )
-        setShowLoginButton(true)
-        setShowLogoutButton(false)
-        setFullName(false)
-    }
+    // const onSignoutSuccess = ()=>{
+    //     alert('you have been signed out successFully' )
+    //     setShowLoginButton(true)
+    //     setShowLogoutButton(false)
+    //     setFullName(false)
+    // }
 
         return(
             <div>
             <div className="coverPic">
-                <div className="header">
+                {/* <div className="header">
                 {showLoginButton ?
                 <GoogleLogin 
                     clientId="779329735420-d9rshfee9j5bk5gjj12gref0ejagsjg0.apps.googleusercontent.com"
@@ -52,7 +52,7 @@ const Home =()=>{
                 }
                 {fullNameUser ? <span className="inlineDiv"><p className="removeMargin2"><h1 className="removeMargin">welcome</h1>{fullNameUser}</p> </span> : null}
                 <img src={logo} alt="logo pic" className="sizeLogo"/>
-                </div>
+                </div> */}
                 <div className="mainInput">
                     <h1 className="titleH1">Everything around you </h1>
                     <input onChange={(e)=>{setSearch(e.target.value)}} className="inputSearch" placeholder="Look for everything around you"/>

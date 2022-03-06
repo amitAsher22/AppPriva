@@ -45,8 +45,6 @@ const ShowAllOwners = (props) => {
 
 
     useEffect( () => {
-     
-               
               if(props.search.trim().length >= 3){
                   const filterAll =  owners2.filter(item => {
                     console.log(item);
